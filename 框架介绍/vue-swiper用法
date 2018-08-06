@@ -1,0 +1,52 @@
+<swiper :options="swiperOption">
+    <swiper-slide>
+
+    </swiper-slide>
+      <div class="swiper-button-prev" slot="button-prev"></div>
+      <div class="swiper-button-next" slot="button-next"></div>
+      <div class="swiper-pagination" slot="pagination"></div>
+</swiper>
+html 结构
+
+
+在script引入组件
+ import { swiper, swiperSlide } from 'vue-awesome-swiper'
+  components: {
+       swiper,
+       swiperSlide
+  },
+
+ // 配置属性 更多功能看文档具体看文档   https://surmon-china.github.io/vue-awesome-swiper/(示例)  http://www.swiper.com.cn/api/index.html(具体文档)
+         swiperOption: {
+           // 分页器
+           pagination: {
+             el: '.swiper-pagination',
+             dynamicBullets: true,
+           },
+           // 自动播放
+           autoplay: {
+             // 时间
+             delay: 2500,
+           },
+
+           // 鼠标滚轮切换
+           mousewheel: false,
+
+           // 轮播的动画效果
+           effect: 'cube',
+           cubeEffect: {
+             shadow: true,
+             slideShadows: true,
+             shadowOffset: 20,
+             shadowScale: 0.94
+           },
+           // 左右按钮
+           navigation: {
+             nextEl: '.swiper-button-next',
+             prevEl: '.swiper-button-prev'
+           },
+           // 是否循环
+           loop : true,
+           // 抓手手势
+           grabCursor: true,
+

@@ -6,19 +6,19 @@
 
 	          <div class="modal-header">
 	            <slot name="header">
-	             	弹窗
+	             	修改
 	            </slot>
 	          </div>
 
 	          <div class="modal-body">
 	            <slot name="body">
-	              这是一个modal模态框
+	            
 	            </slot>
 	          </div>
 
 	          <div class="modal-footer">
 	            <slot name="footer">
-	              <el-button type="primary" @click="$emit('close')">OK</el-button>
+	              <el-button type="primary" @click="$emit('close')">确定并保存</el-button>
 	            </slot>
 	          </div>
 	        </div>
@@ -26,13 +26,31 @@
 	    </div>
 	</transition>
 </template>
+<script>
+
+	export default {
+		data(){
+			return {
+				horsemanInfo:[],
+				value:'',
+				accessToken:''
+			}
+		},
+		created() {
+			
+	    },
+		methods:{
+			
+		}
+	}
+</script>
 <style>
 	.modal-mask {
 	  position: fixed;
 	  z-index: 9998;
 	  top: 0;
 	  left: 0;
-	  width: 80%;
+	  width: 100%;
 	  height: 100%;
 	  background-color: rgba(0, 0, 0, .5);
 	  display: table;

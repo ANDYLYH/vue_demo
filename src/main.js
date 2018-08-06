@@ -1,12 +1,15 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 require('@/assets/css/reset.css')
 import _utils from './utils'
 Vue.config.productionTip = false
 Vue.use(ElementUI)
+
+import 'lib-flexible'
 // 公共js
 // if (/Android (\d+\.\d+)/.test(navigator.userAgent)) {
 // 	var version = parseFloat(RegExp.$1);
@@ -25,6 +28,7 @@ Vue.prototype.utils = _utils;
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>'
 })

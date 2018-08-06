@@ -6,6 +6,7 @@ import minirefresh from '@/components/minirefresh/index'
 import pageReload from '@/components/pageReload/index'
 import swiper from '@/components/swiper/index'
 import ModalPage from '@/components/ModalPage/index'
+import VuexExample from '@/components/Vuex_Example/index'
 Vue.use(Router)
 // 上下拉刷新
 import MiniRefreshTools from 'minirefresh'
@@ -43,6 +44,11 @@ export default new Router({
       path: '/ModalPage',
       name: 'ModalPage',
       component: ModalPage
+    },
+    {
+      path: '/VuexExample',
+      name: 'VuexExample',
+      component: VuexExample
     }
     
   ]

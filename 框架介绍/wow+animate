@@ -1,0 +1,37 @@
+先在main.js 引入animate.css 文件上网下载
+然后引入wow 先npm install
+// 然后引入
+import {WOW} from 'wowjs/dist/wow.min'
+
+let wow = new WOW(
+  {
+    boxClass:     'wow',      // animated element css class (default is wow)
+    animateClass: 'animated', // animation css class (default is animated)
+    offset:       0,          // distance to the element when triggering the animation (default is 0)
+    mobile:       true,       // trigger animations on mobile devices (default is true)
+    live:         true,       // act on asynchronously loaded content (default is true)
+    callback:     function(box) {
+      // the callback is fired every time an animation is started
+      // the argument that is passed in is the DOM node being animated
+    },
+    scrollContainer: null // optional scroll container selector, otherwise use window
+  }
+);
+wow.init();
+
+html这样使用
+ class=" wow slideInLeft" data-wow-duration="0.5s" data-wow-delay="0s"
+
+ class 里面先带wow 后面带animate的类名
+
+后面的data-wow-duration（动画持续时间）、
+data-wow-delay（动画延迟时间）、
+data-wow-offset（元素的位置露出后距离底部多少像素执行）和
+data-wow-iteration（动画执行次数）这四个属性可选可不选。
+
+具体参照官网
+
+https://daneden.github.io/animate.css/
+
+http://mynameismatthieu.com/WOW/
+

@@ -39,6 +39,10 @@ export default {
         {
           name:'ModalPage',
           title:"modal模态框demo"
+        },
+        {
+          name:'VuexExample',
+          title:"vuex的使用案例"
         }
       ]
     }
@@ -57,7 +61,7 @@ ul {
   padding: 0;
 }
 li {
-  display: inline-block;
+  /*display: inline-block;*/
   margin: 0 10px;
   padding: 10px 0;
 }

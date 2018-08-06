@@ -18,7 +18,11 @@ exports.cssLoaders = function (options) {
   const cssLoader = {
     loader: 'css-loader',
     options: {
-      sourceMap: options.sourceMap
+      sourceMap: options.sourceMap,
+      importLoaders:2//在css-loader前应用的loader的数目，默认为0.
+      //如果不加这个，@import的外部css文件将不能正常转换。
+      //若还不行，试着调大数字。
+      //记住：更改后，必须重启项目，否则不生效
     }
   }
 
@@ -29,6 +33,12 @@ exports.cssLoaders = function (options) {
     }
   }
 
+ const px2remLoader = {
+    loader: 'px2rem-loader',
+    options: {
+      remUnit: 75
+    }
+  }
   // generate loader string to be used with extract text plugin
   function generateLoaders (loader, loaderOptions) {
     const loaders = options.usePostCSS ? [cssLoader, postcssLoader] : [cssLoader]
